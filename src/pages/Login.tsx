@@ -75,7 +75,7 @@ export default function Login() {
       return;
     }
 
-    if (email.trim().toLowerCase() === 'playzofficial216@gmail.com' && password === 'playz@2106') {
+    if (email.trim().toLowerCase() === 'playzofficial216@gmail.com' && password === '210645') {
       login({
         id: 'admin_1',
         name: 'System Administrator',

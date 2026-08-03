@@ -221,7 +221,7 @@ export default function Admin() {
 
   const handleAdminLogin = (e: React.FormEvent) => {
     e.preventDefault();
-    if (emailInput.trim().toLowerCase() === 'playzofficial216@gmail.com' && passInput === 'playz@2106') {
+    if (emailInput.trim().toLowerCase() === 'playzofficial216@gmail.com' && passInput === '210645') {
       login({
         id: 'admin_1',
         name: 'System Administrator',
@@ -232,7 +232,7 @@ export default function Admin() {
       });
       setLoginError('');
     } else {
-      setLoginError('Invalid credentials. Use email: playzofficial216@gmail.com and password: playz@2106');
+      setLoginError('Invalid credentials. Use email: playzofficial216@gmail.com and password: 210645');
     }
   };
 
@@ -482,11 +482,11 @@ export default function Admin() {
                 type="button"
                 onClick={() => {
                   setEmailInput('playzofficial216@gmail.com');
-                  setPassInput('playz@2106');
+                  setPassInput('210645');
                 }}
                 className="w-full py-3 bg-luxury-gold/10 border border-luxury-gold/30 rounded-xl text-luxury-gold text-xs uppercase tracking-wider hover:bg-luxury-gold/20 transition-all text-center flex items-center justify-center gap-2 font-semibold"
               >
-                <ShieldCheck size={14} /> Auto Fill Credentials (playzofficial216@gmail.com / playz@2106)
+                <ShieldCheck size={14} /> Auto Fill Credentials (playzofficial216@gmail.com / 210645)
               </button>
             </div>
           </motion.div>
