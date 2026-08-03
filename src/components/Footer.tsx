@@ -81,9 +81,14 @@ export default function Footer() {
 
         <div className="w-full h-px bg-gradient-to-r from-transparent via-white/10 to-transparent mb-12" />
         
-        <div className="flex flex-col md:flex-row justify-between w-full items-center text-white/20 text-[10px] tracking-[0.4em] uppercase">
+        <div className="flex flex-col md:flex-row justify-between w-full items-center text-white/30 text-[10px] tracking-[0.3em] uppercase gap-4">
           <p>&copy; {new Date().getFullYear()} Aura Luxury. All rights reserved.</p>
-          <p className="mt-4 md:mt-0">Geneva • Paris • London</p>
+          <div className="flex flex-col md:flex-row items-center gap-2 md:gap-6 text-white/50">
+            <span>Made with 💗 by TechTipsTool</span>
+            <span className="hidden md:inline text-white/20">•</span>
+            <span>Mockup developed by TechTipsTool</span>
+          </div>
+          <p>Geneva • Paris • London</p>
         </div>
       </div>
     </footer>
