@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-route
 import ReactLenis, { useLenis } from 'lenis/react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { SpeedInsights } from '@vercel/speed-insights/react';
 import CustomCursor from './components/CustomCursor';
 import LoadingScreen from './components/LoadingScreen';
 import ScrollToTopButton from './components/ScrollToTopButton';
@@ -118,7 +119,7 @@ export default function App() {
           </Routes>
         </Suspense>
       </Router>
+      <SpeedInsights />
     </ReactLenis>
   );
 }
-
