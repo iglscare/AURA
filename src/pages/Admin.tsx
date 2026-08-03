@@ -221,18 +221,18 @@ export default function Admin() {
 
   const handleAdminLogin = (e: React.FormEvent) => {
     e.preventDefault();
-    if (emailInput.trim().toLowerCase() === 'admin@gmail.com' && passInput === 'admin') {
+    if (emailInput.trim().toLowerCase() === 'playzofficial216@gmail.com' && passInput === 'playz@2106') {
       login({
         id: 'admin_1',
         name: 'System Administrator',
-        email: 'admin@gmail.com',
+        email: 'playzofficial216@gmail.com',
         isAdmin: true,
         addresses: ['AURA Headquarters, Geneva'],
         orders: []
       });
       setLoginError('');
     } else {
-      setLoginError('Invalid credentials. Use email: admin@gmail.com and password: admin');
+      setLoginError('Invalid credentials. Use email: playzofficial216@gmail.com and password: playz@2106');
     }
   };
 
@@ -384,7 +384,7 @@ export default function Admin() {
         id: `usr_${lowerEmail.replace(/[^a-z0-9]/g, '_')}`,
         name: cust.name || lowerEmail.split('@')[0],
         email: cust.email,
-        role: lowerEmail === 'admin@gmail.com' ? 'Admin' : 'Customer',
+        role: lowerEmail === 'playzofficial216@gmail.com' ? 'Admin' : 'Customer',
         status: 'Active',
         createdAt: cust.orders[0]?.date || '2026-07-28',
         notes: `Registered Customer (${cust.ordersCount} order${cust.ordersCount > 1 ? 's' : ''})`
@@ -450,7 +450,7 @@ export default function Admin() {
                   value={emailInput}
                   onChange={(e) => setEmailInput(e.target.value)}
                   className="w-full bg-black/60 border border-white/15 rounded-xl px-4 py-3.5 text-white focus:outline-none focus:border-luxury-gold focus:ring-1 focus:ring-luxury-gold transition-all text-sm font-sans placeholder:text-gray-600"
-                  placeholder="admin@gmail.com"
+                  placeholder="playzofficial216@gmail.com"
                   required
                 />
               </div>
@@ -462,7 +462,7 @@ export default function Admin() {
                   value={passInput}
                   onChange={(e) => setPassInput(e.target.value)}
                   className="w-full bg-black/60 border border-white/15 rounded-xl px-4 py-3.5 text-white focus:outline-none focus:border-luxury-gold focus:ring-1 focus:ring-luxury-gold transition-all text-sm font-sans placeholder:text-gray-600"
-                  placeholder="admin"
+                  placeholder="••••••••"
                   required
                 />
               </div>
@@ -481,12 +481,12 @@ export default function Admin() {
               <button
                 type="button"
                 onClick={() => {
-                  setEmailInput('admin@gmail.com');
-                  setPassInput('admin');
+                  setEmailInput('playzofficial216@gmail.com');
+                  setPassInput('playz@2106');
                 }}
                 className="w-full py-3 bg-luxury-gold/10 border border-luxury-gold/30 rounded-xl text-luxury-gold text-xs uppercase tracking-wider hover:bg-luxury-gold/20 transition-all text-center flex items-center justify-center gap-2 font-semibold"
               >
-                <ShieldCheck size={14} /> Auto Fill Credentials (admin@gmail.com / admin)
+                <ShieldCheck size={14} /> Auto Fill Credentials (playzofficial216@gmail.com / playz@2106)
               </button>
             </div>
           </motion.div>

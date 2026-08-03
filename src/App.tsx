@@ -65,7 +65,7 @@ export default function App() {
           id: session.user.id,
           name: session.user.user_metadata?.full_name || session.user.email?.split('@')[0] || 'Valued Member',
           email: session.user.email || '',
-          isAdmin: session.user.email === 'admin@gmail.com' || session.user.user_metadata?.is_admin === true,
+          isAdmin: session.user.email === 'playzofficial216@gmail.com' || session.user.user_metadata?.is_admin === true,
           addresses: [],
           orders: []
         });
@@ -78,7 +78,7 @@ export default function App() {
           id: session.user.id,
           name: session.user.user_metadata?.full_name || session.user.email?.split('@')[0] || 'Valued Member',
           email: session.user.email || '',
-          isAdmin: session.user.email === 'admin@gmail.com' || session.user.user_metadata?.is_admin === true,
+          isAdmin: session.user.email === 'playzofficial216@gmail.com' || session.user.user_metadata?.is_admin === true,
           addresses: [],
           orders: []
         });

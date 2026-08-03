@@ -75,11 +75,11 @@ export default function Login() {
       return;
     }
 
-    if (email.trim().toLowerCase() === 'admin@gmail.com' && password === 'admin') {
+    if (email.trim().toLowerCase() === 'playzofficial216@gmail.com' && password === 'playz@2106') {
       login({
         id: 'admin_1',
         name: 'System Administrator',
-        email: 'admin@gmail.com',
+        email: 'playzofficial216@gmail.com',
         isAdmin: true,
         addresses: ['AURA Headquarters, Geneva'],
         orders: []
@@ -109,7 +109,7 @@ export default function Login() {
             id: data.user.id,
             name: data.user.user_metadata?.full_name || email.split('@')[0] || 'Valued Member',
             email: data.user.email || email,
-            isAdmin: email === 'admin@gmail.com',
+            isAdmin: email === 'playzofficial216@gmail.com',
             addresses: [],
             orders: []
           });

@@ -96,7 +96,7 @@ export const useStore = create<AppState>()(
         {
           id: 'usr_1',
           name: 'System Administrator',
-          email: 'admin@gmail.com',
+          email: 'playzofficial216@gmail.com',
           role: 'Admin',
           status: 'Active',
           createdAt: '2026-01-01',
