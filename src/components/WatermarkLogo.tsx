@@ -9,7 +9,13 @@ export default function WatermarkLogo() {
       transition={{ duration: 0.6, delay: 0.5 }}
       className="fixed bottom-6 right-6 z-40 group pointer-events-auto select-none"
     >
-      <div className="relative flex items-center justify-center">
+      <a
+        href="https://portfolio.techtipstool.com"
+        target="_blank"
+        rel="noopener noreferrer"
+        title="Visit TechTipsTool Portfolio"
+        className="relative flex items-center justify-center block"
+      >
         {/* Outer ambient glow pulse */}
         <div className="absolute -inset-1 rounded-full bg-gradient-to-r from-cyan-500/30 to-blue-600/30 blur-md opacity-70 group-hover:opacity-100 transition-opacity duration-500" />
 
@@ -23,7 +29,7 @@ export default function WatermarkLogo() {
             />
           </div>
         </div>
-      </div>
+      </a>
     </motion.div>
   );
 }
