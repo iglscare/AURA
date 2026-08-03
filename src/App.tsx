@@ -6,6 +6,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import CustomCursor from './components/CustomCursor';
 import LoadingScreen from './components/LoadingScreen';
 import ScrollToTopButton from './components/ScrollToTopButton';
+import WatermarkLogo from './components/WatermarkLogo';
 import { useStore } from './store/useStore';
 import { supabase } from './lib/supabase';
 
@@ -103,6 +104,7 @@ export default function App() {
         <LoadingScreen />
         <CustomCursor />
         <ScrollToTopButton />
+        <WatermarkLogo />
         <ScrollToTop />
         <Suspense fallback={<LoadingScreen />}>
           <Routes>
