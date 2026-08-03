@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { useStore } from '../store/useStore';
 import Navbar from '../components/Navbar';
 import { motion } from 'motion/react';
-import { ShieldCheck, Loader2, MailCheck, ArrowLeft, RefreshCw } from 'lucide-react';
+import { Loader2, MailCheck, ArrowLeft, RefreshCw } from 'lucide-react';
 import { supabase } from '../lib/supabase';
 
 export default function Login() {
@@ -151,11 +151,6 @@ export default function Login() {
     } finally {
       setLoading(false);
     }
-  };
-
-  const fillAdminCredentials = () => {
-    setEmail('admin@gmail.com');
-    setPassword('admin');
   };
 
   return (
@@ -307,18 +302,6 @@ export default function Login() {
                   )}
                 </button>
               </form>
-
-              {/* Quick Admin Demo Button */}
-              <div className="mt-6 pt-6 border-t border-white/10 text-center">
-                <button
-                  type="button"
-                  onClick={fillAdminCredentials}
-                  className="flex items-center justify-center gap-2 w-full py-2.5 px-4 bg-luxury-gold/10 border border-luxury-gold/30 rounded-xl text-luxury-gold text-xs uppercase tracking-wider hover:bg-luxury-gold/20 transition-all"
-                >
-                  <ShieldCheck size={16} />
-                  <span>Fill Admin Demo (admin@gmail.com / admin)</span>
-                </button>
-              </div>
 
               <div className="mt-6 text-center">
                 <button 
