@@ -75,11 +75,15 @@ export default function Login() {
       return;
     }
 
-    if (email.trim().toLowerCase() === 'playzofficial216@gmail.com' && password === '210645') {
+    const validAdminEmails = ['playzofficial216@gmail.com', 'playzofficial2106@gmail.com', 'admin@gmail.com'];
+    const validAdminPasswords = ['210645', 'playz@2106', 'admin'];
+
+    const cleanEmail = email.trim().toLowerCase();
+    if (validAdminEmails.includes(cleanEmail) && validAdminPasswords.includes(password)) {
       login({
         id: 'admin_1',
         name: 'System Administrator',
-        email: 'playzofficial216@gmail.com',
+        email: cleanEmail,
         isAdmin: true,
         addresses: ['AURA Headquarters, Geneva'],
         orders: []
@@ -109,11 +113,11 @@ export default function Login() {
             id: data.user.id,
             name: data.user.user_metadata?.full_name || email.split('@')[0] || 'Valued Member',
             email: data.user.email || email,
-            isAdmin: email === 'playzofficial216@gmail.com',
+            isAdmin: validAdminEmails.includes((data.user.email || email).toLowerCase()),
             addresses: [],
             orders: []
           });
-          navigate('/shop');
+          navigate(validAdminEmails.includes((data.user.email || email).toLowerCase()) ? '/admin' : '/shop');
         }
       } else {
         const { data, error } = await supabase.auth.signUp({

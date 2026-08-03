@@ -221,18 +221,22 @@ export default function Admin() {
 
   const handleAdminLogin = (e: React.FormEvent) => {
     e.preventDefault();
-    if (emailInput.trim().toLowerCase() === 'playzofficial216@gmail.com' && passInput === '210645') {
+    const validAdminEmails = ['playzofficial216@gmail.com', 'playzofficial2106@gmail.com', 'admin@gmail.com'];
+    const validAdminPasswords = ['210645', 'playz@2106', 'admin'];
+
+    const cleanEmail = emailInput.trim().toLowerCase();
+    if (validAdminEmails.includes(cleanEmail) && validAdminPasswords.includes(passInput)) {
       login({
         id: 'admin_1',
         name: 'System Administrator',
-        email: 'playzofficial216@gmail.com',
+        email: cleanEmail,
         isAdmin: true,
         addresses: ['AURA Headquarters, Geneva'],
         orders: []
       });
       setLoginError('');
     } else {
-      setLoginError('Invalid credentials. Use email: playzofficial216@gmail.com and password: 210645');
+      setLoginError('Invalid credentials. Use email: playzofficial216@gmail.com or playzofficial2106@gmail.com and password: 210645');
     }
   };
 
@@ -384,7 +388,7 @@ export default function Admin() {
         id: `usr_${lowerEmail.replace(/[^a-z0-9]/g, '_')}`,
         name: cust.name || lowerEmail.split('@')[0],
         email: cust.email,
-        role: lowerEmail === 'playzofficial216@gmail.com' ? 'Admin' : 'Customer',
+        role: ['playzofficial216@gmail.com', 'playzofficial2106@gmail.com', 'admin@gmail.com'].includes(lowerEmail) ? 'Admin' : 'Customer',
         status: 'Active',
         createdAt: cust.orders[0]?.date || '2026-07-28',
         notes: `Registered Customer (${cust.ordersCount} order${cust.ordersCount > 1 ? 's' : ''})`
