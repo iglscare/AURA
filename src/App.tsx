@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-route
 import ReactLenis, { useLenis } from 'lenis/react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import CustomCursor from './components/CustomCursor';
 import LoadingScreen from './components/LoadingScreen';
 import ScrollToTopButton from './components/ScrollToTopButton';
 import WatermarkLogo from './components/WatermarkLogo';
@@ -102,7 +101,6 @@ export default function App() {
       <GsapLenisSync />
       <Router>
         <LoadingScreen />
-        <CustomCursor />
         <ScrollToTopButton />
         <WatermarkLogo />
         <ScrollToTop />
